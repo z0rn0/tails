@@ -1,6 +1,14 @@
 #!/bin/bash
 set -e
 
+. /etc/os-release
+if dpkg --compare-versions $TAILS_VERSION_ID lt 5.3; then
+    echo "ERROR: your Tails is outdated."
+    echo "please upgrade tails first"
+    tails-upgrade-frontend-wrapper &
+    exit 1
+fi
+
 echo "============================="
 echo "add persistent folders"
 echo "============================="
