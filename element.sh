@@ -64,7 +64,7 @@ fi
 apt-get update
 apt-get install -y flatpak xdg-desktop-portal-gtk
 
-torify flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo -u amnesia torify flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 
 echo ""
@@ -72,7 +72,7 @@ echo "============================="
 echo "install element"
 echo "============================="
 
-torify flatpak install -y flathub im.riot.Riot
+sudo -u amnesia torify flatpak install -y flathub im.riot.Riot
 
 # create application entry
 cat <<EOF > /home/amnesia/.local/share/applications/Element.desktop
