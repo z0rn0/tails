@@ -1,5 +1,6 @@
 # Install Element on Tails
 
+requires tails ≥5.3
 
 ## Quick but unsecure way
 ```
